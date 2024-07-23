@@ -95,8 +95,8 @@ variable "lock" {
   DESCRIPTION 
 
   validation {
-      condition     = var.lock != null ? contains(["CanNotDelete", "ReadOnly"], var.lock.kind) : true
-      error_message = "Lock kind must be either `\"CanNotDelete\"` or `\"ReadOnly\"`."
+    condition     = var.lock != null ? contains(["CanNotDelete", "ReadOnly"], var.lock.kind) : true
+    error_message = "Lock kind must be either `\"CanNotDelete\"` or `\"ReadOnly\"`."
   }
 }
 
